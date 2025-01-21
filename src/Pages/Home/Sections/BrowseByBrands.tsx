@@ -4,7 +4,7 @@ import '../../../Style/BrowseByBrandsStyled.css';
 
 const BrowseByBrands: React.FC = () => {
   return (
-    <section className="partners-section">
+    <section className="partners-section-BrowseByBrands">
       <div className="brand-image">
         <h2>Navegue por Marcas</h2>
         <img src={brands} alt="Marcas" />
