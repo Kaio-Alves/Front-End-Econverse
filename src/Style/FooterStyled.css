@@ -41,6 +41,7 @@ footer {
     flex-direction: row; 
     gap: 10px;
     position: relative;
+    top: -20px;
     left:280px;
   }
   .newsletter-section h2 {

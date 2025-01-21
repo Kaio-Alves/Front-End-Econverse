@@ -25,11 +25,15 @@
   
   .logo {
     height: 40px;
+    position: relative;
+    left: 40px;
   }
+  
+
   
   .search-bar {
     flex: 1;
-    margin: 0 200px;
+    margin: 0 300px;
     padding: 10px;
     border: 1px solid #f4f3f3;
     border-radius: 4px;
@@ -43,6 +47,8 @@
   
   .icons {
     display: flex;
+    position: relative;
+    right: 40px;
     gap: 20px;
   }
   
@@ -81,4 +87,7 @@
   .navigation li {
     cursor: pointer;
   }
+  
+
+
   

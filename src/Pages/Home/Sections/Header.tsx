@@ -4,15 +4,14 @@ import ShoppingCart from '../../../Assets/ShoppingCart.png';
 import favorites from '../../../Assets/favorites.png';
 import profile from '../../../Assets/profile.png';
 import orders from '../../../Assets/orders.png';
+import header from '../../../Assets/header.png';
 import '../../../Style/HeaderStyled.css';
 
 const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="header-top">
-        <span className = "header-top-description">Compra 100% segura</span>
-        <span className = "header-top-description">Frete grátis acima de R$ 200</span>
-        <span className = "header-top-description">Parcele suas compras</span>
+        <img src={header} />
       </div>
       <div className="header-main">
         <img src={logo} alt="econverse logo" className="logo" />
