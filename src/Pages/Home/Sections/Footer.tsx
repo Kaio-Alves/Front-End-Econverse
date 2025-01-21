@@ -9,22 +9,28 @@ const Footer: React.FC = () => {
   return (
     <footer>
       <section className="newsletter-section">
-        <h2>Inscreva-se na nossa newsletter</h2>
-        <p>Assine a nossa newsletter e receba as novidades e conteúdos exclusivos da Econverse.</p>
-        <form>
-          <input type="text" placeholder="Digite seu nome" />
-          <input type="email" placeholder="Digite seu e-mail" />
-          <div className="terms">
-            <input type="checkbox" id="terms" />
-            <label htmlFor="terms">Aceito os termos e condições</label>
-          </div>
-          <button type="submit">INSCREVER</button>
+        <div id = "footerTitle">
+            <h2>Inscreva-se na nossa newsletter</h2>
+            <p>Assine a nossa newsletter e receba as novidades e conteúdos exclusivos</p>
+            <p>da Econverse.</p>
+        </div>
+        <form id = "forms">
+            <div id = "textNameAndTerms">
+                <input type="text" className= "inputFooter" placeholder="Digite seu nome" />
+                <div className="terms">
+                    <input type="checkbox" id="terms" />
+                    <label htmlFor="terms">Aceito os termos e condições</label>
+                </div>
+            </div>
+            <input type="email" className= "inputFooter" placeholder="Digite seu e-mail" />
+            <button type="submit" id = "buttonSubmitFooter">INSCREVER</button>
         </form>
       </section>
       <section className="footer-content">
         <div className="footer-logo">
           <img src={logo} alt="econverse logo" />
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur</p>
+          <p>adipiscing elit.</p>
           <div className="social-media">
             <a href="#"><img src={instagramIcon} alt="Instagram" /></a>
             <a href="#"><img src={facebookIcon} alt="Facebook" /></a>
