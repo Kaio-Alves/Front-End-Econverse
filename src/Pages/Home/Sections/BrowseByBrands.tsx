@@ -1,5 +1,5 @@
 import React from 'react';
-import brands from '../../../Assets/brand.png';
+import brands from '../../../Assets/group.png';
 import '../../../Style/BrowseByBrandsStyled.css';
 
 const BrowseByBrands: React.FC = () => {
@@ -7,6 +7,10 @@ const BrowseByBrands: React.FC = () => {
     <section className="partners-section">
       <div className="brand-image">
         <h2>Navegue por Marcas</h2>
+        <img src={brands} alt="Marcas" />
+        <img src={brands} alt="Marcas" />
+        <img src={brands} alt="Marcas" />
+        <img src={brands} alt="Marcas" />
         <img src={brands} alt="Marcas" />
       </div>
     </section>

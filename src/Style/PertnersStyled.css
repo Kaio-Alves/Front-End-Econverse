@@ -16,3 +16,23 @@
     width: 600px; 
     height: auto; 
   }
+
+  .partners-section {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .partner-image img {
+
+    height: auto;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .partner-image img:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+  }
+  

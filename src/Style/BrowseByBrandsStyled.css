@@ -4,3 +4,34 @@
     text-align: center;
     color:  #0418aa;
 }
+
+.partners-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+  
+  .brand-image {
+    text-align: center;
+  }
+  
+  .brand-image h2 {
+    margin-bottom: 20px;
+    color: #007BFF;
+  }
+  
+  .brand-image img {
+    height: auto;
+    margin: 0 10px; 
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    border-radius: 20px;
+  }
+  
+  .brand-image img:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+  }
+  
