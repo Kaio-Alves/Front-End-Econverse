@@ -6,6 +6,7 @@ import RelatedProductsWithOptions from './Sections/RelatedProductsWithOptions.ts
 import Pertners from './Sections/Partners.tsx';
 import RelatedProducts from './Sections/RelatedProducts.tsx';
 import BrowseByBrands from './Sections/BrowseByBrands.tsx';
+import Footer from './Sections/Footer.tsx';
 
 
 
@@ -22,6 +23,7 @@ const Home = () => {
         <Pertners />
         <BrowseByBrands />
         <RelatedProducts />
+        <Footer />
       </>
     )
   }
