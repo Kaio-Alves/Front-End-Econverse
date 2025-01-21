@@ -8,6 +8,8 @@
     height: 400px;
     color: #fff;
     font-size: 28px;
+    position: relative;
+    top: -20px;
 }
 
 .highlight-yellow {

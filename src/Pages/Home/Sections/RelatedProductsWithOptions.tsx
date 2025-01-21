@@ -77,17 +77,26 @@ const initialData = {
 
 const RelatedProductsWithOptions: React.FC = () => {
   const [products] = useState<Product[]>(initialData.products);
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handlePrevClick = () => {
-    setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : products.length - 1));
-  };
-
-  const handleNextClick = () => {
-    setCurrentIndex((prevIndex) => (prevIndex < products.length - 4 ? prevIndex + 1 : 0));
-  };
-
-  const visibleProducts = products.slice(currentIndex, currentIndex + 4);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  
+    const handlePrevClick = () => {
+      setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : products.length - 1));
+    };
+  
+    const handleNextClick = () => {
+      setCurrentIndex((prevIndex) => (prevIndex < products.length - 4 ? prevIndex + 1 : 0));
+    };
+  
+    const handleBuyClick = (product: Product) => {
+      setSelectedProduct(product);
+    };
+  
+    const handleCloseModal = () => {
+      setSelectedProduct(null);
+    };
+  
+    const visibleProducts = products.slice(currentIndex, currentIndex + 4);
 
   return (
     <section id="related-products">
@@ -120,13 +129,33 @@ const RelatedProductsWithOptions: React.FC = () => {
                 <p className="product-price">R$ {product.price.toFixed(2)}</p>
                 <p className="product-installment">ou 2x de R$ {(product.price / 2).toFixed(2)} sem juros</p>
                 <p className="product-freight">Frete grátis</p>
-                <button className="buy-button">COMPRAR</button>
+                <button className="buy-button" onClick={() => handleBuyClick(product)}>COMPRAR</button>
               </div>
             </article>
           ))}
         </section>
         <button className="carousel-button next" onClick={handleNextClick}>&#8250;</button>
       </div>
+      {selectedProduct && (
+        <div className="modal-overlay" onClick={handleCloseModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={handleCloseModal}>&times;</button>
+            <img src={selectedProduct.photo} alt={selectedProduct.productName} className="modal-product-image" />
+            <div className="modal-product-details">
+              <h3>{selectedProduct.productName}</h3>
+              <p>{selectedProduct.descriptionShort}</p>
+              <p>R$ {selectedProduct.price.toFixed(2)}</p>
+              <a href="#" className="more-details">Veja mais detalhes do produto &gt;</a>
+              <div className="quantity-selector">
+                <button>-</button>
+                <input type="number" value="1" readOnly />
+                <button>+</button>
+              </div>
+              <button className="buy-button">COMPRAR</button>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
