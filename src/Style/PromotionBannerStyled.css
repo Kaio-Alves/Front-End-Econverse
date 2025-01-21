@@ -1,0 +1,49 @@
+#mainPromotionBanner {
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
+      url('../Assets/PromotionBanner.png');
+    background-repeat: no-repeat;
+    background-size: cover; /* Ajusta a imagem para cobrir a área */
+    background-position: center;
+    height: 400px;
+    color: #fff;
+    font-size: 28px;
+}
+
+.highlight-yellow {
+    color: rgb(255, 208, 0); 
+}
+
+#articlePromotionBanner{
+    position: relative;
+    top: 120px;
+    left: 87px;
+}
+
+#mainPromotionBanner header h2 {
+    margin: 0;
+    line-height: 0.9; 
+}
+
+#mainPromotionBanner p { 
+    margin-top: 15px;  
+} 
+
+#mainPromotionBanner button { 
+    margin-top: 10px;
+}
+
+#mainPromotionBanner button { 
+    padding: 8px 18px; 
+    background-color: orange; 
+    color: #fff; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    margin-top: 10px;
+ } 
+ 
+ #mainPromotionBanner button:hover { 
+    background-color: rgb(3, 3, 171); 
+}
